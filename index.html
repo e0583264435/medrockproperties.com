@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MedRock Properties LLC</title>
-<meta name="description" content="MedRock Properties LLC is a privately held commercial real estate company.">
+<meta name="description" content="MedRock Properties LLC is a privately held commercial healthcare real estate company — owner and manager of medical office property.">
 <link rel="canonical" href="https://medrockproperties.com/">
 <meta property="og:title" content="MedRock Properties LLC">
-<meta property="og:description" content="A privately held commercial real estate company.">
+<meta property="og:description" content="A privately held commercial healthcare real estate company.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://medrockproperties.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1826'/%3E%3Crect x='6' y='16' width='3.6' height='10' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='11.6' y='7' width='3.6' height='19' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='17.2' y='11' width='3.6' height='15' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='22.8' y='18' width='3.6' height='8' rx='1.8' fill='%23A9C7E8'/%3E%3C/svg%3E">
@@ -22,7 +22,7 @@
   "url": "https://medrockproperties.com/",
   "email": "elliot@medrockproperties.com",
   "telephone": "+1-561-794-6267",
-  "description": "Privately held commercial real estate company."
+  "description": "Privately held commercial healthcare real estate company — owner and manager of medical office property."
 }
 </script>
 <style>
@@ -135,6 +135,17 @@
   .btn-quiet { color: #fff; border: 1px solid rgba(169,199,232,.34); background: rgba(255,255,255,.03); }
   .btn-quiet:hover { background: rgba(255,255,255,.09); }
 
+  /* ---------- sector strip ---------- */
+  .strip { background: var(--paper); border-bottom: 1px solid var(--line); }
+  .strip .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-block: 20px; }
+  .strip .kicker { font-size: 11.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .strip ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+  .strip li {
+    font-size: 14px; font-weight: 500; color: #23324A;
+    border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--ground);
+  }
+  @media (prefers-color-scheme: dark) { .strip li { color: #D6E2F2; } }
+
   /* ---------- sections ---------- */
   section { padding-block: 84px; }
   .eyebrow {
@@ -227,8 +238,8 @@
   <section class="hero">
     <div class="wrap">
       <span class="pill"><i aria-hidden="true"></i> Privately held · Owner-operated</span>
-      <h1>Commercial real estate, owned and <em>managed directly.</em></h1>
-      <p>MedRock Properties LLC holds commercial property for the long term and runs it in-house, without layers between the owner and the people who use the buildings.</p>
+      <h1>Healthcare real estate, owned and <em>managed directly.</em></h1>
+      <p>MedRock Properties LLC holds commercial medical office property for the long term and runs it in-house, so the practices and vendors in our buildings deal with the owner.</p>
       <div class="cta">
         <a class="btn btn-solid" href="tel:+15617946267">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -242,16 +253,28 @@
     </div>
   </section>
 
+  <div class="strip">
+    <div class="wrap">
+      <span class="kicker">Focus</span>
+      <ul>
+        <li>Medical office buildings</li>
+        <li>Clinical &amp; outpatient suites</li>
+        <li>Physician practices</li>
+        <li>Triple-net leases</li>
+      </ul>
+    </div>
+  </div>
+
   <section id="about">
     <div class="wrap">
       <p class="eyebrow reveal">About</p>
-      <h2 class="reveal">An owner-operator, not a brokerage</h2>
-      <p class="lede reveal">MedRock Properties LLC owns commercial real estate and manages it directly. Tenants, vendors and service providers deal with the owner directly.</p>
+      <h2 class="reveal">An owner-operator in healthcare real estate</h2>
+      <p class="lede reveal">MedRock Properties LLC owns commercial healthcare property — medical office space leased to clinical practices — and manages it directly rather than through a brokerage.</p>
       <div class="grid">
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
           <h3>Ownership</h3>
-          <p>Commercial property held for the long term, not traded.</p>
+          <p>Medical office property held for the long term, not traded.</p>
         </div>
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.8 2.8 0 0 1-4-4z"/><path d="m18 2 4 4"/></svg></div>
@@ -261,7 +284,7 @@
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
           <h3>Tenant relations</h3>
-          <p>Direct contact, with decisions made by the owner.</p>
+          <p>Clinical tenants reach the owner, not a call queue.</p>
         </div>
       </div>
     </div>
@@ -285,8 +308,8 @@
         </div>
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <h3>Quick response</h3>
-          <p>Calls and email go straight to the owner.</p>
+          <h3>Minimal disruption</h3>
+          <p>Building work planned around patient hours.</p>
         </div>
       </div>
     </div>
@@ -322,7 +345,7 @@
       </svg>
       <span class="name">MedRock</span>
     </a>
-    <span>&copy; 2026 MedRock Properties LLC · Commercial real estate</span>
+    <span>&copy; 2026 MedRock Properties LLC · Healthcare real estate</span>
   </div>
 </footer>
 
