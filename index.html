@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MedRock Properties LLC</title>
-<meta name="description" content="MedRock Properties LLC is a privately held commercial healthcare real estate company — owner and manager of medical office property.">
+<title>MedRock Properties | Healthcare Real Estate</title>
+<meta name="description" content="MedRock Properties LLC is a privately held, owner-operated healthcare real estate company focused on long-term ownership of medical office property and selective development, including build-to-suit facilities.">
 <link rel="canonical" href="https://medrockproperties.com/">
 <meta name="theme-color" content="#0E1826">
-<meta property="og:title" content="MedRock Properties LLC">
-<meta property="og:description" content="A privately held commercial healthcare real estate company.">
+<meta property="og:title" content="MedRock Properties | Healthcare Real Estate">
+<meta property="og:description" content="Privately held, owner-operated healthcare real estate — long-term ownership and selective development.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://medrockproperties.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1826'/%3E%3Crect x='6' y='16' width='3.6' height='10' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='11.6' y='7' width='3.6' height='19' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='17.2' y='11' width='3.6' height='15' rx='1.8' fill='%23A9C7E8'/%3E%3Crect x='22.8' y='18' width='3.6' height='8' rx='1.8' fill='%23A9C7E8'/%3E%3C/svg%3E">
@@ -23,7 +23,7 @@
   "url": "https://medrockproperties.com/",
   "email": "elliot@medrockproperties.com",
   "telephone": "+1-561-794-6267",
-  "description": "Privately held commercial healthcare real estate company — owner and manager of medical office property."
+  "description": "Privately held, owner-operated healthcare real estate company focused on long-term ownership of medical office property and selective development."
 }
 </script>
 <style>
@@ -54,7 +54,7 @@
     }
     body { color: #E7EEF7; }
     .card, .contact-card { background: var(--paper); }
-    h1, h2, h3, .contact-card .val { color: #F2F6FB; }
+    h1, h2, h3, .contact-card .val, .fact .v, .route .t { color: #F2F6FB; }
     .btn-quiet { background: rgba(255,255,255,.04); }
   }
   * { box-sizing: border-box; }
@@ -136,16 +136,19 @@
   .btn-quiet { color: #fff; border: 1px solid rgba(169,199,232,.34); background: rgba(255,255,255,.03); }
   .btn-quiet:hover { background: rgba(255,255,255,.09); }
 
-  /* ---------- sector strip ---------- */
+  /* ---------- investment strip ---------- */
   .strip { background: var(--paper); border-bottom: 1px solid var(--line); }
-  .strip .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-block: 20px; }
-  .strip .kicker { font-size: 11.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-  .strip ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
-  .strip li {
-    font-size: 14px; font-weight: 500; color: #23324A;
-    border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--ground);
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+  .fact { padding: 24px 24px 24px 26px; border-left: 1px solid var(--line); }
+  .fact:first-child { border-left: 0; padding-left: 0; }
+  .fact .k { display: block; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+  .fact .v { display: block; font-size: 15.5px; font-weight: 600; line-height: 1.4; color: #101B2B; letter-spacing: -.01em; margin: 0; }
+  @media (max-width: 860px) {
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .fact { padding: 20px 18px; }
+    .fact:nth-child(odd) { border-left: 0; padding-left: 0; }
+    .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
   }
-  @media (prefers-color-scheme: dark) { .strip li { color: #D6E2F2; } }
 
   /* ---------- sections ---------- */
   section { padding-block: 84px; }
@@ -175,8 +178,21 @@
   .card h3 { margin: 0 0 7px; font-size: 17.5px; font-weight: 600; letter-spacing: -.01em; color: #101B2B; }
   .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
+  .alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .text-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 34px; font-weight: 600; font-size: 15.5px; }
+  .text-link svg { width: 16px; height: 16px; transition: transform .18s ease; }
+  .text-link:hover svg { transform: translateX(3px); }
+
   /* ---------- contact ---------- */
   #contact { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .routes-title { margin: 44px 0 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .routes { display: grid; gap: 0 28px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 8px; }
+  .route { padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .route .t { font-size: 15.5px; font-weight: 600; color: #101B2B; letter-spacing: -.01em; line-height: 1.4; }
+  .route .t:hover { color: var(--blue); text-decoration: none; }
+  .route .t svg { display: inline-block; width: 15px; height: 15px; margin-left: 6px; vertical-align: -2px; color: var(--blue); transition: transform .18s ease; }
+  .route .t:hover svg { transform: translateX(3px); }
+  .route .d { font-size: 14px; color: var(--muted); margin: 3px 0 0; line-height: 1.5; }
   .contact-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-top: 40px; }
   .contact-card {
     display: flex; align-items: center; gap: 16px;
@@ -199,6 +215,7 @@
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
     .btn:hover, .card:hover, .contact-card:hover { transform: none; }
+    .text-link:hover svg, .route .t:hover svg { transform: none; }
   }
 
   @media (max-width: 760px) {
@@ -208,8 +225,18 @@
     .nav nav { gap: 18px; }
     .brand .sub { display: none; }
   }
+  @media (max-width: 560px) {
+    .nav nav a.wide-only { display: none; }
+  }
   @media (max-width: 420px) {
-    .nav nav a:not(:last-child) { display: none; }
+    .contact-card { padding: 18px; gap: 14px; }
+    .contact-card .val { font-size: 16px; }
+  }
+
+  /* dark mode text colors — kept last so they override the light-mode rules above */
+  @media (prefers-color-scheme: dark) {
+    h1, h2, h3, .card h3, .contact-card .val, .fact .v, .route .t { color: #F2F6FB; }
+    .route .t:hover { color: var(--blue-hi); }
   }
 </style>
 <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
@@ -228,8 +255,9 @@
       <span class="name">MedRock<span class="sub">PROPERTIES</span></span>
     </a>
     <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#approach">Approach</a>
+      <a class="wide-only" href="#about">About</a>
+      <a class="wide-only" href="#approach">Approach</a>
+      <a href="#development">Development</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -239,16 +267,16 @@
   <section class="hero">
     <div class="wrap">
       <span class="pill"><i aria-hidden="true"></i> Privately held · Owner-operated</span>
-      <h1>Healthcare real estate, owned and <em>managed directly.</em></h1>
-      <p>MedRock Properties LLC holds and manages well-established healthcare real estate.</p>
+      <h1>Healthcare real estate, owned <em>for the long term.</em></h1>
+      <p>MedRock Properties LLC owns and operates healthcare real estate in established medical markets, with a focus on strategic locations, long-term ownership and selective development opportunities.</p>
       <div class="cta">
-        <a class="btn btn-solid" href="tel:+15617946267">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (561) 794-6267
+        <a class="btn btn-solid" href="#development">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+          Development
         </a>
-        <a class="btn btn-quiet" href="mailto:elliot@medrockproperties.com">
+        <a class="btn btn-quiet" href="#contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          Email us
+          Get in touch
         </a>
       </div>
     </div>
@@ -256,14 +284,12 @@
 
   <div class="strip">
     <div class="wrap">
-      <span class="kicker">Focus</span>
-      <ul>
-        <li>Medical office buildings</li>
-        <li>Established medical corridors</li>
-        <li>Clinical &amp; outpatient suites</li>
-        <li>Physician practices</li>
-        <li>Triple-net leases</li>
-      </ul>
+      <dl class="facts">
+        <div class="fact"><dt class="k">Investment focus</dt> <dd class="v">Medical office buildings</dd></div>
+        <div class="fact"><dt class="k">Market focus</dt> <dd class="v">Established healthcare corridors</dd></div>
+        <div class="fact"><dt class="k">Property types</dt> <dd class="v">Clinical and outpatient facilities</dd></div>
+        <div class="fact"><dt class="k">Investment approach</dt> <dd class="v">Direct ownership, long-term perspective</dd></div>
+      </dl>
     </div>
   </div>
 
@@ -271,7 +297,7 @@
     <div class="wrap">
       <p class="eyebrow reveal">About</p>
       <h2 class="reveal">An owner-operator in healthcare real estate</h2>
-      <p class="lede reveal">MedRock Properties LLC owns commercial healthcare property — medical office space leased to clinical practices — and manages it directly rather than through a brokerage.</p>
+      <p class="lede reveal">MedRock Properties LLC owns and directly manages commercial healthcare real estate, with a focus on medical office properties. The company takes a long-term ownership approach and selectively evaluates development opportunities.</p>
       <div class="grid">
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
@@ -286,34 +312,63 @@
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
           <h3>Tenant relations</h3>
-          <p>Clinical tenants reach the owner, not a call queue.</p>
+          <p>Direct communication with ownership and responsive attention to tenant needs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="approach">
+  <section id="approach" class="alt">
     <div class="wrap">
       <p class="eyebrow reveal">Approach</p>
       <h2 class="reveal">Buildings in established medical corridors</h2>
-      <p class="lede reveal">Our healthcare facilities sit in established medical corridors, among hospitals, clinics and the practices that refer between them — where patients already come for care.</p>
+      <p class="lede reveal">MedRock focuses on healthcare properties in established medical markets, including locations near hospitals, clinics and outpatient providers.</p>
       <div class="grid">
         <div class="card reveal">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <h3>Transparent billing</h3>
-          <p>Statements show how every charge was worked out.</p>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+          <h3>Healthcare focus</h3>
+          <p>Healthcare real estate is MedRock's investment focus, including medical office and outpatient properties.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Established demand</h3>
+          <p>Locations within established healthcare corridors, evaluated for long-term relevance and access to medical services.</p>
         </div>
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-          <h3>Careful vendors</h3>
-          <p>Contractors are vetted and their paperwork kept current.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <h3>Minimal disruption</h3>
-          <p>Building work planned around patient hours.</p>
+          <h3>Disciplined operation</h3>
+          <p>Transparent billing, vetted vendors, and building work scheduled around patient hours.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="development">
+    <div class="wrap">
+      <p class="eyebrow reveal">Development</p>
+      <h2 class="reveal">Healthcare real estate development</h2>
+      <p class="lede reveal">MedRock selectively evaluates healthcare real estate development opportunities, including build-to-suit facilities and partnerships with healthcare organizations. Opportunities are subject to site suitability, tenant requirements, financing and required approvals.</p>
+      <div class="grid">
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M3 21h18"/><path d="M9 21v-7h6v7"/><path d="M9 10h.01M15 10h.01"/></svg></div>
+          <h3>Build-to-suit</h3>
+          <p>Facilities planned around a healthcare tenant's space and operational requirements.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg></div>
+          <h3>Healthcare locations</h3>
+          <p>Strategically located sites suited to healthcare facilities and outpatient services.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Development partnerships</h3>
+          <p>Discussions with health systems, physician groups, brokers, landowners and capital partners.</p>
+        </div>
+      </div>
+      <a class="text-link reveal" href="mailto:elliot@medrockproperties.com?subject=Facility%20requirement">
+        Discuss a facility requirement
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
     </div>
   </section>
 
@@ -325,12 +380,27 @@
       <div class="contact-grid">
         <a class="contact-card reveal" href="tel:+15617946267">
           <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          <span><span class="lbl">Phone</span><span class="val">(561) 794-6267</span></span>
+          <span><span class="lbl">Phone</span> <span class="val">(561) 794-6267</span></span>
         </a>
         <a class="contact-card reveal" href="mailto:elliot@medrockproperties.com">
           <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-          <span><span class="lbl">Email</span><span class="val">elliot@medrockproperties.com</span></span>
+          <span><span class="lbl">Email</span> <span class="val">elliot@<wbr>medrockproperties.com</span></span>
         </a>
+      </div>
+      <p class="routes-title reveal">Or write about a specific topic</p>
+      <div class="routes">
+        <div class="route reveal">
+          <a class="t" href="mailto:elliot@medrockproperties.com?subject=Facility%20requirement">Healthcare organizations &amp; physician groups<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <p class="d">Facility needs and build-to-suit projects</p>
+        </div>
+        <div class="route reveal">
+          <a class="t" href="mailto:elliot@medrockproperties.com?subject=Property%20or%20site%20opportunity">Brokers &amp; property owners<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <p class="d">Properties and sites for MedRock to consider</p>
+        </div>
+        <div class="route reveal">
+          <a class="t" href="mailto:elliot@medrockproperties.com?subject=Financing%20and%20partnership%20inquiry">Lenders &amp; development partners<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <p class="d">Financing, site evaluation and development opportunities</p>
+        </div>
       </div>
     </div>
   </section>
