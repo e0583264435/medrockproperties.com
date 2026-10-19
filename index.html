@@ -118,8 +118,8 @@
   .pill i { width: 6px; height: 6px; border-radius: 50%; background: var(--blue-hi); display: inline-block; }
   h1 {
     font-family: var(--serif); font-weight: 400;
-    font-size: clamp(38px, 6vw, 66px); line-height: 1.06; letter-spacing: -.02em;
-    margin: 0 0 20px; max-width: 16ch; color: #fff;
+    font-size: clamp(33px, 5.2vw, 58px); line-height: 1.08; letter-spacing: -.02em;
+    margin: 0 0 20px; max-width: 22ch; color: #fff; text-wrap: balance;
   }
   h1 em { font-style: normal; color: var(--light); }
   .hero p { margin: 0; font-size: clamp(16.5px, 2vw, 19px); color: rgba(231,238,247,.8); max-width: 52ch; }
@@ -179,6 +179,20 @@
   .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
   .alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .criteria {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px 44px;
+    margin-top: 22px; padding: 28px 30px; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow);
+  }
+  .criteria h3 { margin: 0 0 4px; font-size: 11.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .criteria ul { list-style: none; margin: 0; padding: 0; }
+  .criteria li { position: relative; padding: 11px 0 11px 28px; border-bottom: 1px solid var(--line); font-size: 15.5px; font-weight: 500; }
+  .criteria li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .criteria li::before {
+    content: ""; position: absolute; left: 3px; top: 17px;
+    width: 11px; height: 6px; border-left: 2px solid var(--blue); border-bottom: 2px solid var(--blue);
+    transform: rotate(-45deg);
+  }
   .text-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 34px; font-weight: 600; font-size: 15.5px; }
   .text-link svg { width: 16px; height: 16px; transition: transform .18s ease; }
   .text-link:hover svg { transform: translateX(3px); }
@@ -224,6 +238,7 @@
     section { padding-block: 60px; }
     .nav nav { gap: 18px; }
     .brand .sub { display: none; }
+    .criteria { padding: 22px 20px; }
   }
   @media (max-width: 560px) {
     .nav nav a.wide-only { display: none; }
@@ -235,7 +250,9 @@
 
   /* dark mode text colors — kept last so they override the light-mode rules above */
   @media (prefers-color-scheme: dark) {
+    body { color: #E7EEF7; }
     h1, h2, h3, .card h3, .contact-card .val, .fact .v, .route .t { color: #F2F6FB; }
+    .eyebrow, .text-link { color: var(--blue-hi); }
     .route .t:hover { color: var(--blue-hi); }
   }
 </style>
@@ -267,8 +284,8 @@
   <section class="hero">
     <div class="wrap">
       <span class="pill"><i aria-hidden="true"></i> Privately held · Owner-operated</span>
-      <h1>Healthcare real estate, owned <em>for the long term.</em></h1>
-      <p>MedRock Properties LLC owns and operates healthcare real estate in established medical markets, with a focus on strategic locations, long-term ownership and selective development opportunities.</p>
+      <h1>Healthcare real estate ownership and development focused on <em>long-term value.</em></h1>
+      <p>MedRock Properties LLC concentrates on medical office buildings, outpatient facilities and strategic development opportunities.</p>
       <div class="cta">
         <a class="btn btn-solid" href="#development">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
@@ -363,6 +380,24 @@
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <h3>Development partnerships</h3>
           <p>Discussions with health systems, physician groups, brokers, landowners and capital partners.</p>
+        </div>
+      </div>
+      <div class="criteria reveal">
+        <div>
+          <h3>Project types</h3>
+          <ul>
+            <li>Build-to-suit medical office</li>
+            <li>Outpatient clinics</li>
+            <li>Single-tenant healthcare facilities</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Site criteria</h3>
+          <ul>
+            <li>Established medical corridors</li>
+            <li>Strong local demographics</li>
+            <li>Long-term healthcare demand</li>
+          </ul>
         </div>
       </div>
       <a class="text-link reveal" href="mailto:elliot@medrockproperties.com?subject=Facility%20requirement">
